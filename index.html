@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tebak Lanjutan Ayat — Dark Premium 🌙</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
+
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">☾</div>
+        <div>
+          <h1>Tebak Lanjutan Ayat</h1>
+          <p>Quiz Qur'an • belajar sambil bermain</p>
+        </div>
+      </div>
+      <button id="soundBtn" class="icon-btn" aria-label="Aktifkan suara">🔊</button>
+    </header>
+
+    <section id="homeScreen" class="screen active">
+      <div class="hero-card">
+        <span class="pill">🌙 Islamic Quiz</span>
+        <h2>Seberapa jago kamu<br><span>menyambung ayat?</span></h2>
+        <p>Pilih kelanjutan ayat yang paling tepat. Main santai, kumpulkan poin, dan tambah hafalanmu.</p>
+
+        <div class="features">
+          <div><b>10</b><span>Soal</span></div>
+          <div><b>15s</b><span>Per soal</span></div>
+          <div><b>3</b><span>Nyawa</span></div>
+        </div>
+
+        <div class="difficulty">
+          <button class="difficulty-btn selected" data-level="easy">🌱 Mudah</button>
+          <button class="difficulty-btn" data-level="medium">🌿 Sedang</button>
+          <button class="difficulty-btn" data-level="hard">🌳 Sulit</button>
+        </div>
+
+        <button id="startBtn" class="primary-btn">Mulai Quiz <span>→</span></button>
+        <p class="note">Teks ayat pada demo ini berasal dari ayat-ayat pendek yang umum dikenal. Tetap cocokkan dengan mushaf/sumber tepercaya saat digunakan untuk pembelajaran serius.</p>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <div class="game-top">
+        <div class="progress-wrap">
+          <div class="progress-label"><span id="questionNumber">Soal 1/10</span><span id="scoreText">0 poin</span></div>
+          <div class="progress"><div id="progressBar"></div></div>
+        </div>
+        <div id="lives" class="lives">❤️❤️❤️</div>
+      </div>
+
+      <div class="timer"><span>⏱</span><b id="timerText">15</b> detik</div>
+
+      <div class="question-card">
+        <div class="small-label">Lanjutan ayatnya adalah...</div>
+        <div id="ayahText" class="ayah" dir="rtl"></div>
+        <div id="sourceText" class="source"></div>
+      </div>
+
+      <div id="answers" class="answers"></div>
+
+      <div id="feedback" class="feedback"></div>
+
+      <button id="nextBtn" class="next-btn">Soal Berikutnya <span>→</span></button>
+    </section>
+
+    <section id="resultScreen" class="screen">
+      <div class="result-card">
+        <div id="resultEmoji" class="result-emoji">🎉</div>
+        <span class="pill">Quiz selesai!</span>
+        <h2 id="resultTitle">MasyaAllah!</h2>
+        <div class="final-score"><span id="finalScore">0</span><small>poin</small></div>
+        <p id="resultMessage"></p>
+        <div class="result-stats">
+          <div><b id="correctCount">0</b><span>Benar</span></div>
+          <div><b id="wrongCount">0</b><span>Salah</span></div>
+          <div><b id="bestScore">0</b><span>High Score</span></div>
+        </div>
+        <button id="restartBtn" class="primary-btn">Main Lagi <span>↻</span></button>
+        <button id="homeBtn" class="secondary-btn">Kembali ke Beranda</button>
+      </div>
+    </section>
+
+    <footer>Belajar • Mengingat • Mengamalkan 🤍</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
